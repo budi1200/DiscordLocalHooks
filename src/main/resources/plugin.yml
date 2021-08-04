@@ -1,0 +1,19 @@
+name: DiscordLocalHooks
+version: ${version}
+author: budi1200
+main: si.budimir.discordLocalHooks.DiscordLocalHooksMain
+api-version: 1.17
+depend: [AuthMe]
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:1.5.21
+  - org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0
+  - com.squareup.okhttp3:okhttp:4.9.0
+commands:
+  reload:
+    description: Reload plugin
+    usage: /ldh reload
+
+permissions:
+  discordlocalhooks.admin.reload:
+    description: Reload the plugin
+    default: op

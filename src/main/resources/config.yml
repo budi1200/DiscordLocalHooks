@@ -1,0 +1,10 @@
+pluginPrefix: "&f&lHooks » &r"
+
+webhooks:
+  authme: ""
+
+##########################################################################
+# Language
+##########################################################################
+lang:
+  missingPermissions: "&cYou don't have the required permissions!"
