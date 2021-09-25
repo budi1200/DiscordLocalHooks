@@ -41,7 +41,7 @@ class StoreCommand: SubCommandBase {
     }
 
     override fun getPermission(): String {
-        return Permissions.STORE.perm
+        return Permissions.STORE.getPerm()
     }
 
     override fun getDesc(): String {

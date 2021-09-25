@@ -11,6 +11,7 @@ import si.budimir.discordLocalHooks.util.Permissions
 class ReloadCommand: SubCommandBase {
     override fun execute(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
         if(DiscordLocalHooksMain.instance.mainConfig.reloadConfig()){
+            MessageHelper.reloadPrefix()
             MessageHelper.sendMessage(sender as Player, "<green>Plugin Reloaded!")
         }else{
             MessageHelper.sendMessage(sender as Player, "<red>Failed to reload plugin!")
@@ -19,7 +20,7 @@ class ReloadCommand: SubCommandBase {
     }
 
     override fun getPermission(): String {
-        return Permissions.RELOAD.perm
+        return Permissions.RELOAD.getPerm()
     }
 
     override fun getDesc(): String {

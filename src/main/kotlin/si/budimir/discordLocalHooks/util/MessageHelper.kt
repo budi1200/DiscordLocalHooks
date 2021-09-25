@@ -11,7 +11,11 @@ abstract class MessageHelper {
     companion object {
         private val plugin = DiscordLocalHooksMain.instance
         private val config: MainConfig = plugin.mainConfig
-        private val pluginPrefix = config.getParsedString("pluginPrefix")
+        private var pluginPrefix = config.getParsedString("pluginPrefix")
+
+        fun reloadPrefix() {
+            pluginPrefix = config.getParsedString("pluginPrefix")
+        }
 
         fun sendMessage(player: Player, key: String, placeholders: MutableMap<String, String>, prefix: Boolean = true) {
             var tmp = Component.text("")

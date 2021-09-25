@@ -1,12 +1,12 @@
 plugins {
     idea
-    kotlin("jvm") version "1.5.21"
-    kotlin("plugin.serialization") version "1.4.32"
+    kotlin("jvm") version "1.5.31"
+    kotlin("plugin.serialization") version "1.5.31"
     id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
 group = "si.budimir"
-version = "1.0.0-SNAPSHOT"
+version = "1.2.0"
 
 repositories {
     mavenCentral()
@@ -17,10 +17,9 @@ repositories {
 
 dependencies {
     compileOnly((kotlin("stdlib")))
-    compileOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0")
-    compileOnly("com.squareup.okhttp3:okhttp:4.9.0")
+    compileOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0-RC")
+    compileOnly("com.squareup.okhttp3:okhttp:4.9.1")
     compileOnly("io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT")
-    compileOnly("fr.xephi:authme:5.6.0-SNAPSHOT")
 
     implementation("net.kyori:adventure-text-minimessage:4.1.0-SNAPSHOT")
 }

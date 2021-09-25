@@ -26,7 +26,7 @@ class DhCommand : CommandExecutor, TabExecutor {
             val sc: SubCommandBase = subCommands[args[0]] ?: return false
             val reqPerm: String = sc.getPermission()
 
-            if(reqPerm == Permissions.NONE.perm || sender.hasPermission(reqPerm)){
+            if(reqPerm == "" || sender.hasPermission(reqPerm)){
                 sc.execute(sender, command, label, args)
                 return true
             }else{
