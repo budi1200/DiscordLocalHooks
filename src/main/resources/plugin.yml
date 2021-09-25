@@ -9,9 +9,9 @@ libraries:
   - org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0
   - com.squareup.okhttp3:okhttp:4.9.0
 commands:
-  reload:
-    description: Reload plugin
-    usage: /ldh reload
+  dlh:
+    description: Plugin command
+    usage: /dlh
 
 permissions:
   discordlocalhooks.admin.reload:

@@ -1,7 +1,8 @@
-pluginPrefix: "&f&lHooks » &r"
+pluginPrefix: "<white><bold>Hooks » </bold>"
 
 webhooks:
   authme: ""
+  store: ""
 
 ##########################################################################
 # Language

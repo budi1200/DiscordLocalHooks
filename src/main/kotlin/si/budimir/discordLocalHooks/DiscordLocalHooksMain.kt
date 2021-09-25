@@ -24,7 +24,7 @@ class DiscordLocalHooksMain: JavaPlugin() {
 
         // Commands
         dhCommand = DhCommand()
-        this.getCommand("ldh")?.setExecutor(dhCommand)
+        this.getCommand("dlh")?.setExecutor(dhCommand)
 
         // Event listeners
         server.pluginManager.registerEvents(AuthMeWrongPassListener(this), this)
@@ -32,7 +32,7 @@ class DiscordLocalHooksMain: JavaPlugin() {
         // Hooks
         authmeApi = AuthMeApi.getInstance()
 
-        logger.info("DiscordHooks Loaded!")
+        logger.info("DiscordLocalHooks Loaded!")
     }
 
     override fun onDisable() {

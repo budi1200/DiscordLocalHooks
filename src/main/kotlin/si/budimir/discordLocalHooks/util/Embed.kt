@@ -13,8 +13,8 @@ data class EmbedContent(
     val description: String?,
     val color: Int,
     val timestamp: String?,
-    val footer: Footer,
-    val thumbnail: Thumbnail,
+    val footer: Footer?,
+    val thumbnail: Thumbnail?,
     val author: Author?,
     val fields: ArrayList<Field> = arrayListOf()
 )
