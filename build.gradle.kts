@@ -1,12 +1,12 @@
 plugins {
     idea
-    kotlin("jvm") version "1.5.31"
-    kotlin("plugin.serialization") version "1.5.31"
-    id("com.github.johnrengelman.shadow") version "7.0.0"
+    kotlin("jvm") version "1.6.0"
+    kotlin("plugin.serialization") version "1.6.0"
+    id("com.github.johnrengelman.shadow") version "7.1.0"
 }
 
 group = "si.budimir"
-version = "1.2.0"
+version = "1.3.0"
 
 repositories {
     mavenCentral()
@@ -17,22 +17,15 @@ repositories {
 
 dependencies {
     compileOnly((kotlin("stdlib")))
-    compileOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0-RC")
-    compileOnly("com.squareup.okhttp3:okhttp:4.9.1")
-    compileOnly("io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT")
+    compileOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
+    compileOnly("com.squareup.okhttp3:okhttp:4.9.3")
+    compileOnly("io.papermc.paper:paper-api:1.18.1-R0.1-SNAPSHOT")
 
     implementation("net.kyori:adventure-text-minimessage:4.1.0-SNAPSHOT")
 }
 
-configure<JavaPluginConvention> {
-    sourceCompatibility = JavaVersion.VERSION_16
-    targetCompatibility = JavaVersion.VERSION_16
-}
-
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-    kotlinOptions{
-        jvmTarget = JavaVersion.VERSION_16.toString()
-    }
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
 
 tasks.processResources {
@@ -42,7 +35,7 @@ tasks.processResources {
 tasks.shadowJar {
     // This makes it shadow only stuff with "implementation"
     project.configurations.implementation.get().isCanBeResolved = true
-    configurations = mutableListOf(project.configurations.implementation.get())
+    configurations = mutableListOf(project.configurations.implementation.get()) as List<FileCollection>?
 
     minimize {}
 }

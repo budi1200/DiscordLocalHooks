@@ -8,7 +8,7 @@ import java.io.IOException
 
 class WebHookHandler {
     companion object {
-        var client: OkHttpClient = OkHttpClient()
+        private var client: OkHttpClient = OkHttpClient()
 
         fun send(data: String, url: String) {
             val body: RequestBody = data.toRequestBody("application/json".toMediaType())

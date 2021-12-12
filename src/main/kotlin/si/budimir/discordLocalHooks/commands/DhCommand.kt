@@ -8,7 +8,6 @@ import org.bukkit.entity.Player
 import si.budimir.discordLocalHooks.commands.subcommands.ReloadCommand
 import si.budimir.discordLocalHooks.commands.subcommands.StoreCommand
 import si.budimir.discordLocalHooks.util.MessageHelper
-import si.budimir.discordLocalHooks.util.Permissions
 
 class DhCommand : CommandExecutor, TabExecutor {
     private val subCommands: MutableMap<String, SubCommandBase> = HashMap()

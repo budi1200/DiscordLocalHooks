@@ -25,8 +25,4 @@ class DiscordLocalHooksMain: JavaPlugin() {
 
         logger.info("DiscordLocalHooks Loaded!")
     }
-
-    override fun onDisable() {
-        super.onDisable()
-    }
 }
