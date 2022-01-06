@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "si.budimir"
-version = "1.3.0"
+version = "1.4.0"
 
 repositories {
     mavenCentral()
@@ -46,7 +46,7 @@ tasks.register("copyToServer"){
     doLast {
         copy {
             from("build/libs/DiscordLocalHooks-" + project.version + "-all.jar")
-            into("C:\\Users\\budi1\\Desktop\\Custom Plugins\\00-server\\plugins")
+            into("../00-server/plugins")
         }
     }
 }

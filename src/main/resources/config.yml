@@ -1,8 +1,8 @@
 pluginPrefix: "<white><bold>Hooks » </bold>"
 
 webhooks:
-  authme: ""
   store: ""
+  matrix: ""
 
 ##########################################################################
 # Language

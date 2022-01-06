@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.command.TabExecutor
 import org.bukkit.entity.Player
+import si.budimir.discordLocalHooks.commands.subcommands.LogCommand
 import si.budimir.discordLocalHooks.commands.subcommands.ReloadCommand
 import si.budimir.discordLocalHooks.commands.subcommands.StoreCommand
 import si.budimir.discordLocalHooks.util.MessageHelper
@@ -16,6 +17,7 @@ class DhCommand : CommandExecutor, TabExecutor {
     init {
          subCommands["reload"] = ReloadCommand()
          subCommands["store"] = StoreCommand()
+         subCommands["log"] = LogCommand()
 
         subCommandsList = subCommands.keys.toList()
     }
