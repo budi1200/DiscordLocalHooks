@@ -18,7 +18,7 @@ class LogCommand: SubCommandBase {
         val title = "Overwatch | Log"
         val color = args[1].toInt()
 
-        val message = args.drop(3).joinToString(" ")
+        val message = args.drop(2).joinToString(" ")
         val thumbnail = Thumbnail("https://crafthead.net/cube/${args[2]}")
 
         val embed = EmbedContent(title, message, color, Instant.now().toString(), null, thumbnail, null)
