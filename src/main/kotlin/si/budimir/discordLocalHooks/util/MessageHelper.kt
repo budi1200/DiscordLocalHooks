@@ -12,6 +12,7 @@ abstract class MessageHelper {
         private val plugin = DiscordLocalHooksMain.instance
         private val config: MainConfig = plugin.mainConfig
         private var pluginPrefix = config.getParsedString("pluginPrefix")
+        private var miniMessage = MiniMessage.builder().build()
 
         fun reloadPrefix() {
             pluginPrefix = config.getParsedString("pluginPrefix")
@@ -36,7 +37,7 @@ abstract class MessageHelper {
                 tmp = tmp.append(pluginPrefix)
             }
 
-            tmp = tmp.append(MiniMessage.markdown().parse(message))
+            tmp = tmp.append(miniMessage.deserialize(message))
 
             player.sendMessage(tmp)
         }
