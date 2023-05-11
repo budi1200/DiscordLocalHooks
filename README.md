@@ -30,9 +30,9 @@ On startup a configuration file is loaded: `config.yml`. This file can be found 
 
 ### Usage
 
-  - `/dlp store <color> <message>` - Sends a store purchase notification Discord embed with the specified color and message.
-  - `/dlp log <color> <player> <message>` - Sends an anti-cheat notification Discord embed with the specified color and message.
-  - `/dlp reload` - Reloads the plugin's configuration files. 
+  - `/dlh store <color> <message>` - Sends a store purchase notification Discord embed with the specified color and message.
+  - `/dlh log <color> <player> <message>` - Sends an anti-cheat notification Discord embed with the specified color and message.
+  - `/dlh reload` - Reloads the plugin's configuration files. 
 
 ### Permissions
 
