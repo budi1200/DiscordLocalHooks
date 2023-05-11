@@ -15,8 +15,11 @@ such as a failing to log in due to incorrect credentials.
 
 - Integration with AuthMe _(removed after we switched to premium only)_
   - Listen to wrong password events on players with `authme.staffnotify` (usually meant for staff) and notify the configured Discord channel.
+  - Also checks for any accounts associated with the players IP address.
+    <br/><img src="https://slocraft.eu/github-pictures/authme-demo.png" width=400 />
 - Store command which can be used to send donation notifications to a Discord channel.
 - Log command which can be configured with an anti-cheat plugin to notify a Discord channel when cheating is detected.
+  <br/><img src="https://slocraft.eu/github-pictures/matrix-demo.png" width=400 />
 
 ### Dependencies
 
